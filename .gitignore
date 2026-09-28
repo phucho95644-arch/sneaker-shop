@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Build
+dist/
+**/dist/
+
+# Logs
+*.log
+backend/test_*.txt
+backend/test_output.txt
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

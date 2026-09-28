@@ -1,0 +1,472 @@
+.order-history-page {
+    min-height: 100vh;
+    padding: 55px 0 90px;
+    background: #f7f7f7;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.order-history-header {
+    margin-bottom: 30px;
+}
+
+.order-history-header > span {
+    color: #ff5a1f;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.order-history-header h1 {
+    margin: 7px 0;
+
+    color: #111111;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: 900;
+}
+
+.order-history-header p {
+    margin: 0;
+    color: #777777;
+}
+
+/* ============================================================
+   FILTER
+============================================================ */
+
+.order-history-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin-bottom: 28px;
+}
+
+.order-history-filters button {
+    min-height: 41px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dddddd;
+    border-radius: 50px;
+
+    color: #555555;
+    background: #ffffff;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.order-history-filters button:hover {
+    border-color: #ff5a1f;
+    color: #ff5a1f;
+}
+
+.order-history-filters button.active {
+    border-color: #ff5a1f;
+    color: #ffffff;
+    background: #ff5a1f;
+}
+
+/* ============================================================
+   LIST
+============================================================ */
+
+.order-history-list {
+    display: grid;
+    gap: 18px;
+}
+
+.order-history-card {
+    padding: 25px;
+
+    border: 1px solid #e7e7e7;
+    border-radius: 17px;
+
+    background: #ffffff;
+}
+
+/* ============================================================
+   CARD TOP
+============================================================ */
+
+.order-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-number {
+    color: #555555;
+}
+
+.order-number strong {
+    color: #111111;
+    font-size: 1.05rem;
+}
+
+.order-date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 6px;
+
+    color: #999999;
+
+    font-size: 0.78rem;
+}
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.order-status {
+    padding: 6px 11px;
+
+    border-radius: 50px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.order-status.pending {
+    color: #a66c00;
+    background: #fff3cd;
+}
+
+.order-status.confirmed {
+    color: #0d6efd;
+    background: #e8f1ff;
+}
+
+.order-status.processing {
+    color: #6f42c1;
+    background: #f1e9ff;
+}
+
+.order-status.shipping {
+    color: #087990;
+    background: #d9f5fa;
+}
+
+.order-status.delivered {
+    color: #198754;
+    background: #e6f7ee;
+}
+
+.order-status.cancelled {
+    color: #dc3545;
+    background: #fdebec;
+}
+
+.order-status.unknown {
+    color: #555555;
+    background: #eeeeee;
+}
+
+/* ============================================================
+   INFO
+============================================================ */
+
+.order-card-body {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 15px;
+
+    padding: 20px 0;
+}
+
+.order-info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-info-box span {
+    color: #999999;
+
+    font-size: 0.75rem;
+}
+
+.order-info-box strong {
+    color: #333333;
+}
+
+.order-info-box .order-total-price {
+    color: #ff5a1f;
+
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
+/* ============================================================
+   PRODUCTS PREVIEW
+============================================================ */
+
+.order-product-preview {
+    display: grid;
+    gap: 8px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #f8f8f8;
+}
+
+.order-product-preview > div {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #555555;
+
+    font-size: 0.83rem;
+}
+
+.order-product-preview svg {
+    flex-shrink: 0;
+
+    color: #ff5a1f;
+}
+
+.order-product-preview small {
+    color: #999999;
+}
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.order-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.order-card-actions a,
+.order-card-actions button {
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border-radius: 9px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.order-cancel-button {
+    border: 1px solid #ffd1d5;
+
+    color: #dc3545;
+
+    background: #fff5f5;
+}
+
+.order-cancel-button:hover:not(:disabled) {
+    color: #ffffff;
+    background: #dc3545;
+}
+
+.order-detail-button {
+    border: 0;
+
+    color: #ffffff;
+
+    background: #111111;
+}
+
+.order-detail-button:hover {
+    color: #ffffff;
+    background: #ff5a1f;
+}
+
+/* ============================================================
+   EMPTY / ERROR
+============================================================ */
+
+.order-history-empty,
+.order-history-error {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.order-history-empty > svg,
+.order-history-error > svg {
+    margin-bottom: 15px;
+
+    color: #cccccc;
+
+    font-size: 4rem;
+}
+
+.order-history-empty h2,
+.order-history-error h2 {
+    font-weight: 900;
+}
+
+.order-history-empty p,
+.order-history-error p {
+    color: #888888;
+}
+
+.order-history-empty a,
+.order-history-error button {
+    min-height: 47px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border: 0;
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    background: #ff5a1f;
+
+    font-weight: 800;
+}
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+
+.order-history-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.order-history-pagination button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background: #ffffff;
+}
+
+.order-history-pagination button:hover:not(:disabled) {
+    border-color: #ff5a1f;
+
+    color: #ff5a1f;
+}
+
+.order-history-pagination button:disabled {
+    opacity: 0.35;
+}
+
+.order-history-pagination span {
+    color: #777777;
+
+    font-size: 0.85rem;
+}
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.order-history-loading {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #666666;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 767px) {
+    .order-card-body {
+        grid-template-columns: 1fr;
+    }
+
+    .order-card-actions {
+        justify-content: stretch;
+    }
+
+    .order-card-actions a,
+    .order-card-actions button {
+        flex: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .order-history-page {
+        padding: 35px 0 65px;
+    }
+
+    .order-history-card {
+        padding: 19px;
+    }
+
+    .order-card-top {
+        flex-direction: column;
+    }
+
+    .order-card-actions {
+        flex-direction: column;
+    }
+
+    .order-card-actions a,
+    .order-card-actions button {
+        width: 100%;
+    }
+}

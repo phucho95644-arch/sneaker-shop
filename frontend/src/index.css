@@ -1,0 +1,269 @@
+:root {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #151515;
+    background: #f7f7f7;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    background: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* ============================================================
+   LAYOUT
+============================================================ */
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-main {
+    flex: 1;
+}
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.sneaker-navbar {
+    min-height: 72px;
+    background: #111111;
+}
+
+.sneaker-brand {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.sneaker-brand:hover {
+    color: #ffffff;
+}
+
+.sneaker-brand span {
+    color: #ff5a1f;
+    margin-left: 4px;
+}
+
+.sneaker-navbar .nav-link {
+    color: rgba(
+        255,
+        255,
+        255,
+        0.78
+    );
+
+    font-weight: 500;
+
+    margin-left: 12px;
+}
+
+.sneaker-navbar .nav-link:hover,
+.sneaker-navbar .nav-link.active {
+    color: #ffffff;
+}
+
+.header-icon-btn {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.18
+        );
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.header-icon-btn:hover {
+    color: #ffffff;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+}
+
+.sneaker-primary-btn {
+    color: #ffffff;
+    background: #ff5a1f;
+    border-color: #ff5a1f;
+}
+
+.sneaker-primary-btn:hover {
+    color: #ffffff;
+    background: #e94d15;
+    border-color: #e94d15;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.sneaker-footer {
+    margin-top: 70px;
+
+    color: #aaaaaa;
+    background: #111111;
+}
+
+.sneaker-footer h6 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-brand {
+    display: inline-block;
+}
+
+.footer-description {
+    max-width: 430px;
+    line-height: 1.8;
+}
+
+.sneaker-footer a:not(
+        .sneaker-brand
+    ) {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #aaaaaa;
+
+    transition: 0.2s;
+}
+
+.sneaker-footer a:hover {
+    color: #ffffff;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #222222;
+}
+
+.sneaker-footer hr {
+    margin-top: 36px;
+
+    border-color: #333333;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (
+    max-width: 991px
+) {
+    .sneaker-actions {
+        align-items: stretch !important;
+
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    .sneaker-navbar .nav-link {
+        margin-left: 0;
+    }
+}
+/* ============================================================
+   CART BADGE
+============================================================ */
+
+.header-cart-link {
+    position: relative;
+}
+
+.header-cart-badge {
+    position: absolute;
+
+    top: -7px;
+    right: -7px;
+
+    min-width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border: 2px solid #111111;
+    border-radius: 999px;
+
+    color: #ffffff;
+    background: #ff5a1f;
+
+    font-size: 0.65rem;
+    font-weight: 800;
+    line-height: 1;
+}
